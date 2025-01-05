@@ -34,3 +34,16 @@ Y = tf.constant(outputs.to_numpy(dtype=float))
 print(X)
 print('========')
 print(Y)
+
+
+print('++++++++++++++++++++++++++++++++========')
+# 练习 删除缺失值最多的列
+data = pd.read_csv(data_file)
+print(data)
+column_name = data.isna().sum().idxmax()
+print(column_name)
+# 删除缺失值最多的列
+data = data.drop(column_name, axis=1)
+print(data)
+tensor = tf.constant(data.to_numpy(dtype=int))
+print(tensor)
