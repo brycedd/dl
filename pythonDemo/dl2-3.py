@@ -1,5 +1,6 @@
 import tensorflow as tf
 
+## 2.3 线性代数
 X = tf.reshape(tf.range(20), (5, 4))
 print(X)
 # 降维
@@ -57,3 +58,7 @@ print(A)
 print(x)
 print(tf.linalg.matvec(A, x))
 
+print('练习1==============================>')
+A = tf.reshape(tf.range(24), (2,3,4))
+print(A)
+print(len(A))
